@@ -18,19 +18,11 @@ class ServiceTypeExpander implements ServiceTypeExpanderInterface
      */
     protected ServiceTypeReaderInterface $serviceTypeReader;
 
-    /**
-     * @param \Spryker\Client\ShipmentTypeServicePointStorage\Reader\ServiceTypeReaderInterface $serviceTypeReader
-     */
     public function __construct(ServiceTypeReaderInterface $serviceTypeReader)
     {
         $this->serviceTypeReader = $serviceTypeReader;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeStorageCollectionTransfer $shipmentTypeStorageCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeStorageCollectionTransfer
-     */
     public function expandShipmentTypeStorageCollectionWithServiceType(
         ShipmentTypeStorageCollectionTransfer $shipmentTypeStorageCollectionTransfer
     ): ShipmentTypeStorageCollectionTransfer {

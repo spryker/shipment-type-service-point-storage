@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ServiceTypeStorageCriteriaTransfer;
 
 interface ShipmentTypeServicePointStorageToServicePointStorageClientInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageCriteriaTransfer $serviceTypeStorageCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeStorageCollectionTransfer
-     */
     public function getServiceTypeStorageCollection(
         ServiceTypeStorageCriteriaTransfer $serviceTypeStorageCriteriaTransfer
     ): ServiceTypeStorageCollectionTransfer;

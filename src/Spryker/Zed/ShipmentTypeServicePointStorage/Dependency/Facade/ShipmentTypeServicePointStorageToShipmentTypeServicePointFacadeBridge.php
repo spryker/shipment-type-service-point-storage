@@ -25,11 +25,6 @@ class ShipmentTypeServicePointStorageToShipmentTypeServicePointFacadeBridge impl
         $this->shipmentTypeServicePointFacade = $shipmentTypeServicePointFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeServiceTypeCriteriaTransfer $shipmentTypeServiceTypeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeServiceTypeCollectionTransfer
-     */
     public function getShipmentTypeServiceTypeCollection(
         ShipmentTypeServiceTypeCriteriaTransfer $shipmentTypeServiceTypeCriteriaTransfer
     ): ShipmentTypeServiceTypeCollectionTransfer {

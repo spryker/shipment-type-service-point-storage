@@ -18,11 +18,6 @@ class ShipmentTypeServicePointStorageDependencyProvider extends AbstractDependen
      */
     public const CLIENT_SERVICE_POINT_STORAGE = 'CLIENT_SERVICE_POINT_STORAGE';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -31,11 +26,6 @@ class ShipmentTypeServicePointStorageDependencyProvider extends AbstractDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addServicePointStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_SERVICE_POINT_STORAGE, function (Container $container) {

@@ -25,11 +25,6 @@ class ShipmentTypeServicePointStorageToServicePointStorageClientBridge implement
         $this->servicePointStorageClient = $servicePointStorageClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeStorageCriteriaTransfer $serviceTypeStorageCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceTypeStorageCollectionTransfer
-     */
     public function getServiceTypeStorageCollection(
         ServiceTypeStorageCriteriaTransfer $serviceTypeStorageCriteriaTransfer
     ): ServiceTypeStorageCollectionTransfer {

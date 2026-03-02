@@ -16,25 +16,16 @@ use Spryker\Client\ShipmentTypeServicePointStorage\Reader\ServiceTypeReaderInter
 
 class ShipmentTypeServicePointStorageFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\ShipmentTypeServicePointStorage\Expander\ServiceTypeExpanderInterface
-     */
     public function createServiceTypeExpander(): ServiceTypeExpanderInterface
     {
         return new ServiceTypeExpander($this->createServiceTypeReader());
     }
 
-    /**
-     * @return \Spryker\Client\ShipmentTypeServicePointStorage\Reader\ServiceTypeReaderInterface
-     */
     public function createServiceTypeReader(): ServiceTypeReaderInterface
     {
         return new ServiceTypeReader($this->getServicePointStorageClient());
     }
 
-    /**
-     * @return \Spryker\Client\ShipmentTypeServicePointStorage\Dependency\Client\ShipmentTypeServicePointStorageToServicePointStorageClientInterface
-     */
     public function getServicePointStorageClient(): ShipmentTypeServicePointStorageToServicePointStorageClientInterface
     {
         return $this->getProvidedDependency(ShipmentTypeServicePointStorageDependencyProvider::CLIENT_SERVICE_POINT_STORAGE);

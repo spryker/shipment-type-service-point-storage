@@ -51,9 +51,6 @@ class ExpandShipmentTypeStorageCollectionWithServiceTypeTest extends Unit
      */
     protected ShipmentTypeServicePointStorageClientTester $tester;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -64,9 +61,6 @@ class ExpandShipmentTypeStorageCollectionWithServiceTypeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testShouldExpandCollection(): void
     {
         // Arrange
@@ -90,9 +84,6 @@ class ExpandShipmentTypeStorageCollectionWithServiceTypeTest extends Unit
         $this->assertSame(static::TEST_SERVICE_TYPE_KEY, $expandedShipmentTypeStorageTransfer->getServiceTypeOrFail()->getKey());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldDoNothingWhenServiceTypeUuidIsNotSpecifiedInShipmentTypeStorageTransfer(): void
     {
         // Arrange
@@ -112,9 +103,6 @@ class ExpandShipmentTypeStorageCollectionWithServiceTypeTest extends Unit
         $this->assertNull($expandedShipmentTypeStorageTransfer->getServiceType());
     }
 
-    /**
-     * @return void
-     */
     public function testShouldDoNothingWhenServiceTypeWithProvidedUuidIsNotFoundInStorage(): void
     {
         // Arrange

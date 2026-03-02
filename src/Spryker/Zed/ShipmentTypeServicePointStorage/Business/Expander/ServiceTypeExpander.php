@@ -18,9 +18,6 @@ class ServiceTypeExpander implements ServiceTypeExpanderInterface
      */
     protected ShipmentTypeServiceTypeReaderInterface $shipmentTypeServicePointReader;
 
-    /**
-     * @param \Spryker\Zed\ShipmentTypeServicePointStorage\Business\Reader\ShipmentTypeServiceTypeReaderInterface $shipmentTypeServicePointReader
-     */
     public function __construct(ShipmentTypeServiceTypeReaderInterface $shipmentTypeServicePointReader)
     {
         $this->shipmentTypeServicePointReader = $shipmentTypeServicePointReader;

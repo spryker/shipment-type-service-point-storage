@@ -30,9 +30,6 @@ class ExpandShipmentTypeStoragesWithServiceTypeTest extends Unit
      */
     protected ShipmentTypeServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -40,9 +37,6 @@ class ExpandShipmentTypeStoragesWithServiceTypeTest extends Unit
         $this->tester->ensureShipmentTypeServiceTypeTableIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     public function testExpandsWithServiceType(): void
     {
         // Arrange
@@ -69,9 +63,6 @@ class ExpandShipmentTypeStoragesWithServiceTypeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testExpandsStoragesWithDifferentServiceTypes(): void
     {
         // Arrange
@@ -96,9 +87,6 @@ class ExpandShipmentTypeStoragesWithServiceTypeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenIdShipmentTypeIsNotProvided(): void
     {
         // Arrange
@@ -114,9 +102,6 @@ class ExpandShipmentTypeStoragesWithServiceTypeTest extends Unit
             ->expandShipmentTypeStoragesWithServiceType($shipmentTypeStorageTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testDoesNotExpandStoragesWhenShipmentTypeServiceTypeCollectionEmpty(): void
     {
         // Arrange

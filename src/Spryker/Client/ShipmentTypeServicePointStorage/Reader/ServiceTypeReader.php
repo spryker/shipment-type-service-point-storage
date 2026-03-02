@@ -19,9 +19,6 @@ class ServiceTypeReader implements ServiceTypeReaderInterface
      */
     protected ShipmentTypeServicePointStorageToServicePointStorageClientInterface $servicePointStorageClient;
 
-    /**
-     * @param \Spryker\Client\ShipmentTypeServicePointStorage\Dependency\Client\ShipmentTypeServicePointStorageToServicePointStorageClientInterface $servicePointStorageClient
-     */
     public function __construct(ShipmentTypeServicePointStorageToServicePointStorageClientInterface $servicePointStorageClient)
     {
         $this->servicePointStorageClient = $servicePointStorageClient;

@@ -20,25 +20,16 @@ use Spryker\Zed\ShipmentTypeServicePointStorage\ShipmentTypeServicePointStorageD
  */
 class ShipmentTypeServicePointStorageBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ShipmentTypeServicePointStorage\Business\Expander\ServiceTypeExpanderInterface
-     */
     public function createServiceTypeExpander(): ServiceTypeExpanderInterface
     {
         return new ServiceTypeExpander($this->createShipmentTypeServicePointReader());
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentTypeServicePointStorage\Business\Reader\ShipmentTypeServiceTypeReaderInterface
-     */
     public function createShipmentTypeServicePointReader(): ShipmentTypeServiceTypeReaderInterface
     {
         return new ShipmentTypeServiceTypeReader($this->getShipmentTypeServicePointFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\ShipmentTypeServicePointStorage\Dependency\Facade\ShipmentTypeServicePointStorageToShipmentTypeServicePointFacadeInterface
-     */
     public function getShipmentTypeServicePointFacade(): ShipmentTypeServicePointStorageToShipmentTypeServicePointFacadeInterface
     {
         return $this->getProvidedDependency(ShipmentTypeServicePointStorageDependencyProvider::FACADE_SHIPMENT_TYPE_SERVICE_POINT);

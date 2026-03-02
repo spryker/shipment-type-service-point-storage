@@ -21,11 +21,6 @@ class ShipmentTypeServicePointStorageDependencyProvider extends AbstractBundleDe
      */
     public const FACADE_SHIPMENT_TYPE_SERVICE_POINT = 'FACADE_SHIPMENT_TYPE_SERVICE_POINT';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -34,11 +29,6 @@ class ShipmentTypeServicePointStorageDependencyProvider extends AbstractBundleDe
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addShipmentTypeServicePointFacade(Container $container): Container
     {
         $container->set(static::FACADE_SHIPMENT_TYPE_SERVICE_POINT, function (Container $container) {

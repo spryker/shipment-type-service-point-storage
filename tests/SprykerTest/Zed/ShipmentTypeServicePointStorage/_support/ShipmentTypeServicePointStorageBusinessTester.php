@@ -33,19 +33,11 @@ class ShipmentTypeServicePointStorageBusinessTester extends Actor
 {
     use _generated\ShipmentTypeServicePointStorageBusinessTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureShipmentTypeServiceTypeTableIsEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getShipmentTypeServiceTypeQuery());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTypeTransfer $serviceTypeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeTransfer
-     */
     public function haveShipmentTypeWithServiceTypeRelation(ServiceTypeTransfer $serviceTypeTransfer): ShipmentTypeTransfer
     {
         $shipmentTypeTransfer = $this->haveShipmentType();
@@ -54,9 +46,6 @@ class ShipmentTypeServicePointStorageBusinessTester extends Actor
         return $shipmentTypeTransfer;
     }
 
-    /**
-     * @return \Orm\Zed\ShipmentTypeServicePoint\Persistence\SpyShipmentTypeServiceTypeQuery
-     */
     protected function getShipmentTypeServiceTypeQuery(): SpyShipmentTypeServiceTypeQuery
     {
         return SpyShipmentTypeServiceTypeQuery::create();

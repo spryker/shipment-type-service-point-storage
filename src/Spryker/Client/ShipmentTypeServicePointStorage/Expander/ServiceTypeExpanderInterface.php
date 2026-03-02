@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ShipmentTypeStorageCollectionTransfer;
 
 interface ServiceTypeExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentTypeStorageCollectionTransfer $shipmentTypeStorageCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentTypeStorageCollectionTransfer
-     */
     public function expandShipmentTypeStorageCollectionWithServiceType(
         ShipmentTypeStorageCollectionTransfer $shipmentTypeStorageCollectionTransfer
     ): ShipmentTypeStorageCollectionTransfer;

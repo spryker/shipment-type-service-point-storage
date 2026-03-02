@@ -19,9 +19,6 @@ class ShipmentTypeServiceTypeReader implements ShipmentTypeServiceTypeReaderInte
      */
     protected ShipmentTypeServicePointStorageToShipmentTypeServicePointFacadeInterface $shipmentTypeServicePointFacade;
 
-    /**
-     * @param \Spryker\Zed\ShipmentTypeServicePointStorage\Dependency\Facade\ShipmentTypeServicePointStorageToShipmentTypeServicePointFacadeInterface $shipmentTypeServicePointFacade
-     */
     public function __construct(ShipmentTypeServicePointStorageToShipmentTypeServicePointFacadeInterface $shipmentTypeServicePointFacade)
     {
         $this->shipmentTypeServicePointFacade = $shipmentTypeServicePointFacade;
